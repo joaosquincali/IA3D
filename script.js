@@ -9,13 +9,13 @@ const perguntas = [
         alternativas:["Sim","Não"]
     },
     {
-        enunciado: "Vocẽ a utiliza com frequência?",
-        alternativas:["Muitos vezes","Não muito"]
+        enunciado: "Você a utiliza com frequência?",
+        alternativas:["Muitas vezes","Não muito"]
     },
     {
         enunciado: "Ela pode ser utilizada nos estudos?",
         alternativas:["Sim","Não"]
-    },
+    }
 ]
 
 let posicao = 0;
@@ -27,6 +27,9 @@ function mostraPergunta(){
     mostraAlternativas();
 }
 function mostraAlternativas(){
-   for(const alternativa of perguntaAtual.alternativa){  }
-    const botaoAlternativas = document.crerateElement("button"); 
+    for(const alternativa of perguntaAtual.alternativa){
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa;
+        caixaAlternativa.appendChild(botaoAlternativas);
+    }
 }
